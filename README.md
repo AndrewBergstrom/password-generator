@@ -3,8 +3,8 @@
 
 Description: A password is randomly generated based on criteria that the user provides when prompted.
 
-When the user clicks the button "Generate Password" they are first promoted for password length. If outside the range of 8-50, the user is prompted to once again enter a password lengthw within the range. The prompt will loop until the user enters a valid number.
+When the user clicks the button "Generate Password" they are first promoted for password length. The user must pick any number of characters between 8-128. If the user does not pick a valuation within that range then the user is prompted with and error telling them the number of characters must be between 8-128. Then the user must try again to enter a correct value. 
 
-The program then prompts the user to define if they would like to include numbers, characters, uppercase and/or lowercase letters. If the user selects none to all criteria, the program will ask it to select at least each one and will loop back through the prompts.
+Next, the program runs through a series of prompts asking the user to define if they would like to include special characters, lowercase letters,  uppercase letters and numbers. If the user selects no defining parameters, then the program will prompt a message telling the user to select at least one defining parameter and will cycle back through each prompt.
 
-When all parameters have been defined, the password will appear within the password box.
+After at least one parameter has been defined, the new password will appear.
