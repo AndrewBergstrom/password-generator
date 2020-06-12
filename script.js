@@ -7,7 +7,11 @@ function generatePassword(){
   var numeric =['0','1','2','3','4','5','6','7','8','9'];
   var specialChars = ["!" , "@" , "#" , "$" , "%" , "^" , "&" , "*" , "(" , ")" , "_" , "+"];
   
-  var options = [alpha, caps, numeric, specialChars]
+var pwLength = "";
+var includeSpecial;
+var includenumber;
+var includeLower;
+var includeUpper;
   
 
 //Create generatePassword
@@ -25,21 +29,22 @@ console.log(pwLength)
 
 //confirm whether user wants special characters
   //store in includeSpecial
-var includeSpecial = confirm("Would you like to use special characters")
+var includeSpecial = confirm("Would you like to use special characters");
 console.log(includeSpecial)
+
 //confirm if the user wants numbers
   //store in includenumber
-var includeNumber = confirm("Would you like to use numbers?")
+var includeNumber = confirm("Would you like to use numbers?");
   console.log(includeNumber)
 
 //confirm whether user wants lowercase
   // store in includeLower
-var includeLower = confirm("Would you like to use lowercase letters?")
+var includeLower = confirm("Would you like to use lowercase letters?");
   console.log(includeLower)
 
 //confirm whether user wants uppercase
   // store in includeUpper
-var includeUpper = confirm("Would you like to include uppercase letters?")
+var includeUpper = confirm("Would you like to include uppercase letters?");
   console.log(includeUpper)
 //if character Boolean is true, add that array to the possible characters array
 //
@@ -68,12 +73,39 @@ var includeUpper = confirm("Would you like to include uppercase letters?")
 
 //then when we have completed possibleCharacters array, build the new password array
 //
+    var pwChar =[]
 
-//
 
-var passwordStr=pwLength
 
-return passwordStr
+    if (includeSpecial) {
+      pwChar = pwChar.concat(specialChars)
+    }
+
+    if (includeNumber) {
+      pwChar = pwChar.concat(numeric)
+    }
+
+    if (includeLower) {
+      pwChar = pwChar.concat(alpha)
+    }
+
+    if (includeUpper) {
+      pwChar = pwChar.concat(caps)
+    }
+
+    var randomPw=""
+
+    for (var i = 0; i < pwLength; i++) {
+     var randomPw = randomPw + pwChar [Math.floor(Math.random() * pwChar.length)];
+     console.log(randomPw)
+    
+    }
+
+    return randomPw;
+    
+var passwordStr=pwLength;
+
+return passwordStr;
 }
 
 // Write password to the #password input
