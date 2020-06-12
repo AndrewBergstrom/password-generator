@@ -8,3 +8,5 @@ When the user clicks the button "Generate Password" they are first promoted for 
 Next, the program runs through a series of prompts asking the user to define if they would like to include special characters, lowercase letters,  uppercase letters and numbers. If the user selects no defining parameters, then the program will prompt a message telling the user to select at least one defining parameter and will cycle back through each prompt.
 
 After at least one parameter has been defined, the new password will appear.
+
+To try out my Random Password generator follow this link: https://andrewbergstrom.github.io/password-generator/index.html
